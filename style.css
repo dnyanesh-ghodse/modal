@@ -69,7 +69,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
   background-color: #333;
   color: #eeeeee;
   padding: 6rem;
@@ -79,6 +78,15 @@ p {
   animation-name: moveUp;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
 }
 
 .overlay {
@@ -101,3 +109,12 @@ p {
   }
 
 }
+
+@media only screen and (max-width: 600px) 
+  {
+    .modal{
+      overflow: scroll;
+      height: 70vh;
+      width: 90vw;
+    }
+  }
